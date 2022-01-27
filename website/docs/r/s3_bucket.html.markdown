@@ -176,6 +176,11 @@ resource "aws_s3_bucket" "versioning_bucket" {
 }
 ```
 
+### Using replication configuration
+
+The `replication_configuration` argument is read-only as of version 4.0.
+See the [`aws_s3_bucket_replication_configuration` resource](s3_bucket_replication_configuration.html.markdown) for configuration details.
+
 ### Enable Default Server Side Encryption
 
 ```terraform
