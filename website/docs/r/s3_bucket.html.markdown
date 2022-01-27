@@ -71,6 +71,11 @@ resource "aws_s3_bucket" "b" {
 }
 ```
 
+### Using versioning
+
+The `versioning` argument is read-only as of version 4.0.
+See the [`aws_s3_bucket_versioning` resource](s3_bucket_versioning.html.markdown) for configuration details.
+
 ### Enable Logging
 
 ```terraform
@@ -272,7 +277,11 @@ resource "aws_s3_bucket_versioning" "source" {
 }
 
 resource "aws_s3_bucket_replication_configuration" "source" {
-  depends_on = [aws_s3_bucket_versioning.source]
+  # Must have bucket versioning enabled first
+  depends_on = [
+    aws_s3_bucket_versioning.source,
+    aws_s3_bucket_versioning.destination,
+  ]
 
   bucket = aws_s3_bucket.source.id
   role   = aws_iam_role.replication.arn
