@@ -164,31 +164,31 @@ func ResourceBucket() *schema.Resource {
 			"website": {
 				Type:       schema.TypeList,
 				Computed:   true,
-				Deprecated: "Use the aws_s3_bucket_website resource instead when available in a future minor version",
+				Deprecated: "Use the aws_s3_bucket_website_configuration resource instead when available in a future minor version",
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"index_document": {
 							Type:       schema.TypeString,
 							Computed:   true,
-							Deprecated: "Use the aws_s3_bucket_website resource instead when available in a future minor version",
+							Deprecated: "Use the aws_s3_bucket_website_configuration resource instead when available in a future minor version",
 						},
 
 						"error_document": {
 							Type:       schema.TypeString,
 							Computed:   true,
-							Deprecated: "Use the aws_s3_bucket_website resource instead when available in a future minor version",
+							Deprecated: "Use the aws_s3_bucket_website_configuration resource instead when available in a future minor version",
 						},
 
 						"redirect_all_requests_to": {
 							Type:       schema.TypeString,
 							Computed:   true,
-							Deprecated: "Use the aws_s3_bucket_website resource instead when available in a future minor version",
+							Deprecated: "Use the aws_s3_bucket_website_configuration resource instead when available in a future minor version",
 						},
 
 						"routing_rules": {
 							Type:       schema.TypeString,
 							Computed:   true,
-							Deprecated: "Use the aws_s3_bucket_website resource instead when available in a future minor version",
+							Deprecated: "Use the aws_s3_bucket_website_configuration resource instead when available in a future minor version",
 						},
 					},
 				},
@@ -207,12 +207,12 @@ func ResourceBucket() *schema.Resource {
 			"website_endpoint": {
 				Type:       schema.TypeString,
 				Computed:   true,
-				Deprecated: "Use the aws_s3_bucket_website resource instead when available in a future minor version",
+				Deprecated: "Use the aws_s3_bucket_website_configuration resource instead when available in a future minor version",
 			},
 			"website_domain": {
 				Type:       schema.TypeString,
 				Computed:   true,
-				Deprecated: "Use the aws_s3_bucket_website resource instead when available in a future minor version",
+				Deprecated: "Use the aws_s3_bucket_website_configuration resource instead when available in a future minor version",
 			},
 
 			"versioning": {
